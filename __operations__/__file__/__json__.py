@@ -2,7 +2,7 @@ import os
 import json
 import logging
 from typing import Optional, Union, List, Dict, Any
-from __operations__.__file__.__structure__ import HttpOperatorRequest
+from hiu_os.__operations__.__file__.__structure__ import HttpOperatorRequest
 
 
 class JsonFile(HttpOperatorRequest):

@@ -14,14 +14,14 @@ from typing import Optional, Any, Dict, List, Union
 # ============================================================================
 # Absolute imports from the package root
 # ============================================================================
-from __operations__.__file__.__base__.__formats__ import Formats, DictAttr
-from __operations__.__file__.__base__.__keywords__ import OsKeywords, AppKeywords, SnakePascalName
-from __operations__.__tasks__ import ToDo
-from __operations__.__dir__ import Dir
-from __operations__.__file__.__file__ import File
-from __operations__.__file__.__json__ import JsonFile
-from __operations__.__file__.__pickle__ import PickleFile
-from __operations__.__path__ import Path
+from hiu_os.__operations__.__file__.__base__.__formats__ import Formats, DictAttr
+from hiu_os.__operations__.__file__.__base__.__keywords__ import OsKeywords, AppKeywords, SnakePascalName
+from hiu_os.__operations__.__tasks__ import ToDo
+from hiu_os.__operations__.__dir__ import Dir
+from hiu_os.__operations__.__file__.__file__ import File
+from hiu_os.__operations__.__file__.__json__ import JsonFile
+from hiu_os.__operations__.__file__.__pickle__ import PickleFile
+from hiu_os.__operations__.__path__ import Path
 
 # Ensure OsKeywords has http_types (if not defined, add it)
 if not hasattr(OsKeywords, 'http_types'):
@@ -350,3 +350,6 @@ class OperationsSystem(ToDo):
 
     def on_genesis(self):
         pass
+
+
+print(Path.main_dir())
