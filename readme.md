@@ -1,5 +1,13 @@
-<img src="hiu_logo.png" alt="لوگوی HiuOs" style="max-width: 100%; height: auto;">
-
+<video 
+    src="hiu.mp4" 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;"
+>
+    مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
+</video>
 # Comprehensive Guide to the `__operations__` Package
 
 This package forms the core file and directory management layer for the **TimiOs** (or `hiu_os`) application. It provides a **fluent, cursor‑based interface** that lets you navigate the filesystem, perform CRUD operations on text, JSON, and Pickle files, and manage directories – all with integrated logging.
