@@ -1,4 +1,4 @@
-<img src="hiu.mp4" alt="لوگوی HiuOs" style="max-width: 100%; height: auto;">
+<img src="hiu_logo.png" alt="لوگوی HiuOs" style="max-width: 100%; height: auto;">
 
 # Comprehensive Guide to the `__operations__` Package
 
