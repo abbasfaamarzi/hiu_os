@@ -1,0 +1,139 @@
+{
+    "project_root": "hiu_os",
+    "type": "directory",
+    "description": "Main project root for the operating system, providing file navigation and operations",
+    "children": [
+        {
+            "name": "__operations__",
+            "type": "directory",
+            "description": "Core operations module; contains submodules for base utilities, file handlers, directories, paths, and tasks",
+            "children": [
+                {
+                    "name": "__file__",
+                    "type": "directory",
+                    "description": "File operations for plain text, JSON, and Pickle formats, plus base utilities and abstract structure",
+                    "children": [
+                        {
+                            "name": "__base__",
+                            "type": "directory",
+                            "description": "Base utilities: formats, keywords, logging, serializers, and helper classes",
+                            "children": [
+                                {
+                                    "name": "__formats__.py",
+                                    "type": "file",
+                                    "description": "Classes `Formats` (format detection, naming), `DictAttr` (dict with attribute access), and `VarsApi` (API method filtering)"
+                                },
+                                {
+                                    "name": "__keywords__.py",
+                                    "type": "file",
+                                    "description": "Classes `OsKeywords` (system constants, extensions, reserved words), `AppKeywords` (app settings), and `SnakePascalName` (naming convention conversions)"
+                                },
+                                {
+                                    "name": "__log__.py",
+                                    "type": "file",
+                                    "description": "Class `LifeCycleLog` for lifecycle event logging (start, working, stop) with log storage capability"
+                                },
+                                {
+                                    "name": "__serializers__.py",
+                                    "type": "file",
+                                    "description": "Classes `DictAttr` (attribute‑accessible dict), `SerializersClear` (remove 'path' key), and `Vars` (extract class variables)"
+                                },
+                                {
+                                    "name": "__init__.py",
+                                    "type": "file",
+                                    "description": "Exports from `__base__`: `DictAttr`, `LifeCycleLog`, `Formats`, `OsKeywords`, `SnakePascalName`, `SerializersClear`, `Vars`"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "__structure__",
+                            "type": "directory",
+                            "description": "Abstract base class for HTTP‑like resource operations",
+                            "children": [
+                                {
+                                    "name": "__abstract__.py",
+                                    "type": "file",
+                                    "description": "Abstract class `HttpOperatorRequest` defining `create`, `read`, `update`, `clear`, `delete`; inherits from `LifeCycleLog`"
+                                },
+                                {
+                                    "name": "__init__.py",
+                                    "type": "file",
+                                    "description": "Exports `HttpOperatorRequest` from this module"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "__file__.py",
+                            "type": "file",
+                            "description": "Class `File` for operations on plain text files (txt, csv, etc.) with logging"
+                        },
+                        {
+                            "name": "__json__.py",
+                            "type": "file",
+                            "description": "Class `JsonFile` for JSON file operations (read, write, clear)"
+                        },
+                        {
+                            "name": "__pickle__.py",
+                            "type": "file",
+                            "description": "Class `PickleFile` for Python pickle (binary serialization) operations"
+                        },
+                        {
+                            "name": "__init__.py",
+                            "type": "file",
+                            "description": "Exports from `__file__`: `File`, `JsonFile`, `PickleFile`, plus base utilities (`DictAttr`, `Formats`, etc.) and `HttpOperatorRequest`"
+                        }
+                    ]
+                },
+                {
+                    "name": "__dir__",
+                    "type": "directory",
+                    "description": "Directory operations",
+                    "children": [
+                        {
+                            "name": "__dir__.py",
+                            "type": "file",
+                            "description": "Class `Dir` with methods `create`, `read`, `update` (rename), `clear` (empty contents), and `delete` (remove) with logging support"
+                        },
+                        {
+                            "name": "__init__.py",
+                            "type": "file",
+                            "description": "Exports `Dir` class"
+                        }
+                    ]
+                },
+                {
+                    "name": "__path__",
+                    "type": "directory",
+                    "description": "Path utilities and navigation",
+                    "children": [
+                        {
+                            "name": "__path__.py",
+                            "type": "file",
+                            "description": "Class `Path` with methods `split`, `join`, `main_dir`, `path_builder`, etc. Also class `AppCurser` for fluent chained navigation via attribute/call access"
+                        },
+                        {
+                            "name": "__init__.py",
+                            "type": "file",
+                            "description": "Exports `Path` and `AppCurser`"
+                        }
+                    ]
+                },
+                {
+                    "name": "__tasks__.py",
+                    "type": "file",
+                    "description": "Class `ToDo` with `on_genesis` and `to_do` methods; used as a base for `OperationsSystem`"
+                },
+                {
+                    "name": "_system_.py",
+                    "type": "file",
+                    "description": "Main classes: `CurserInformation` (path info storage), `Curser` (navigation and file/dir operations with chaining), `ShortCuts` (predefined paths), and `OperationsSystem` (high-level accessor with `desktop`, `assets`, `settings`, etc.)"
+                },
+                {
+                    "name": "__init__.py",
+                    "type": "file",
+                    "description": "Exports from the whole `__operations__` module: `HttpOperatorRequest`, `File`, `JsonFile`, `PickleFile`, `Dir`, `Path`, `AppCurser`, `DictAttr`, `LifeCycleLog`, `Formats`, `OsKeywords`, `SnakePascalName`, `SerializersClear`, `Vars`"
+                }
+            ]
+        }
+    ]
+}
