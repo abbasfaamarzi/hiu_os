@@ -1,4 +1,17 @@
-<img src="hiu_logo.png" alt="لوگوی HiuOs" style="max-width: 100%; height: auto;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiuOs</title>
+</head>
+<body>
+    <div style="text-align: center; padding: 2rem;">
+        <img src="hiu_logo.png" alt="لوگوی HiuOs" style="max-width: 100%; height: auto;">
+        <h1 style="margin-top: 20px;">Welcome to HiuOs</h1>
+    </div>
+</body>
+</html>
 
 # Comprehensive Guide to the `__operations__` Package
 
