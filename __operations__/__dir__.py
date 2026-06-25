@@ -2,8 +2,8 @@ import os
 import shutil
 import logging
 from typing import Optional, Union, List, Dict, Any
-from __operations__.__file__.__structure__ import HttpOperatorRequest
-from __operations__.__file__.__base__.__formats__ import Formats
+from hiu_os.__operations__.__file__.__structure__ import HttpOperatorRequest
+from hiu_os.__operations__.__file__.__base__.__formats__ import Formats
 
 
 class Dir(HttpOperatorRequest):

@@ -1,6 +1,6 @@
 import logging
-from __operations__.__file__.__base__.__keywords__ import OsKeywords
-from __operations__.__file__.__base__.__serializers__ import Vars
+from hiu_os.__operations__.__file__.__base__.__keywords__ import OsKeywords
+from hiu_os.__operations__.__file__.__base__.__serializers__ import Vars
 
 logger = logging.getLogger(__name__)
 

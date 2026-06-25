@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Union, Optional, List, Dict, Any
-from __operations__.__file__.__base__ import DictAttr, LifeCycleLog
+from hiu_os.__operations__.__file__.__base__ import DictAttr, LifeCycleLog
 import logging
 import os
 

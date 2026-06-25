@@ -5,8 +5,8 @@ Provides enhanced path splitting, joining, and a cursor-based navigation system.
 
 import os
 import logging
-from __operations__.__file__.__base__.__keywords__ import OsKeywords, AppKeywords
-from __operations__.__file__.__base__.__formats__ import Formats
+from hiu_os.__operations__.__file__.__base__.__keywords__ import OsKeywords, AppKeywords
+from hiu_os.__operations__.__file__.__base__.__formats__ import Formats
 
 logger = logging.getLogger(__name__)
 
@@ -106,7 +106,7 @@ class Path:
         return dirname
 
     @staticmethod
-    def main_dir():
+    def main_dir(dir_name = None):
         """
         Determine the main application directory by locating the application
         name (version_name) in the path components of the current file.
@@ -117,7 +117,7 @@ class Path:
         dirname = Path.location_dir_path(__file__)
         parts = Path.path_cutter(dirname)
         try:
-            app_name_index = parts.index(AppKeywords.version_name)
+            app_name_index = parts.index(dir_name if dir_name else AppKeywords.version_name)
             main_dir = parts[:app_name_index + 1]
             joined = Path.join(*main_dir)
             logger.info(f"Main directory detected: {joined}")
